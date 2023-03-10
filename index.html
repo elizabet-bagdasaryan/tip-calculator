@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="logo"><img src="./img/SPLITTER.png" /></div>
+    <div class="tip-calculator">
+      <div class="left-section">
+        <p class="label">Bill</p>
+        <input type="number" min="0" class="input" id="bill-input" />
+        <img src="./img/$.png" id="dollar-sign" />
+        <p class="label">Select Tip %</p>
+        <div class="tip">
+          <button class="tip-5" id="tips">5%</button>
+          <button class="tip-10" id="tips">10%</button>
+          <button class="tip-15" id="tips">15%</button>
+          <button class="tip-25" id="tips">25%</button>
+          <button class="tip-50" id="tips">50%</button>
+
+          <input
+            type="number"
+            min="0"
+            class="tip-custom"
+            placeholder="Custom"
+          />
+        </div>
+        <div class="people-label">
+          <p class="label">Number of People</p>
+          <p class="error-msg">Can’t be zero</p>
+        </div>
+        <input type="number" min="0" class="input" id="number-people" />
+        <img src="./img/person.png" id="person" />
+      </div>
+
+      <div class="calculated">
+        <div class="tip-amount">
+          <div class="text">
+            <p>Tip Amount</p>
+            <p class="person">/person</p>
+          </div>
+          <div class="amount" id="tip-amount">$0.00</div>
+        </div>
+        <div class="total">
+          <div class="text">
+            <p>Total</p>
+            <p class="person">/person</p>
+          </div>
+          <div class="amount" id="total-amount">$0.00</div>
+        </div>
+        <button class="reset">RESET</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

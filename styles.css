@@ -1,0 +1,283 @@
+body {
+  font-family: "Space Mono", monospace;
+  background-color: #c5e4e7;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 40px 0;
+}
+.tip-calculator {
+  background-color: white;
+  border-radius: 25px 25px 0px 0px;
+  padding: 5vw;
+}
+#bill-input {
+  position: absolute;
+}
+#dollar-sign {
+  position: relative;
+  margin: 15px;
+  height: 18px;
+  width: 12px;
+}
+#person {
+  position: relative;
+  margin: 15px;
+  height: 18px;
+  width: 15px;
+}
+#number-people {
+  position: absolute;
+}
+.input {
+  background-color: #f3f9fa;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 72vw;
+  margin: auto;
+  text-align: end;
+  padding-left: 50px;
+  color: #00474b;
+  font-size: 24px;
+  font-weight: 600;
+  outline: none;
+}
+.input:hover {
+  cursor: pointer;
+}
+.tip button:hover {
+  cursor: pointer;
+  background-color: #9fe8df;
+  color: #00474b;
+  font-weight: 600;
+}
+
+.tip {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "tip-5 tip-10"
+    "tip-15 tip-25"
+    "tip-50 tip-custom";
+  margin-bottom: 60px;
+}
+.tip-5 {
+  grid-area: tip-5;
+  width: 40vw;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00474b;
+  color: white;
+  font-size: 20px;
+}
+.tip-10 {
+  grid-area: tip-10;
+  width: 40vw;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00474b;
+  color: white;
+  font-size: 20px;
+}
+.tip-15 {
+  grid-area: tip-15;
+  width: 40vw;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00474b;
+  color: white;
+  font-size: 20px;
+}
+.tip-25 {
+  grid-area: tip-25;
+  width: 40vw;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00474b;
+  color: white;
+  font-size: 20px;
+}
+.tip-50 {
+  grid-area: tip-50;
+  width: 40vw;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00474b;
+  color: white;
+  font-size: 20px;
+}
+.tip-custom {
+  grid-area: tip-custom;
+  width: 37.4vw;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  background-color: #f3f9fa;
+  color: #547878;
+  text-align: end;
+  padding-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.calculated {
+  background-color: #00474b;
+  border-radius: 15px;
+  color: white;
+  padding: 40px 25px 25px 25px;
+  margin-top: 30px;
+}
+
+.reset {
+  border-radius: 5px;
+  border: none;
+  background-color: #26c2ae;
+  color: #00474b;
+  font-weight: 900;
+  width: 80vw;
+  margin: auto;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 35px;
+}
+
+.amount {
+  color: #26c2ae;
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 25px;
+}
+
+.tip-amount {
+  display: flex;
+  justify-content: space-between;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.person {
+  color: #7f9d9f;
+}
+
+.label {
+  font-weight: 600;
+  color: #5e7a7d;
+  font-size: 18px;
+}
+.error {
+  border: 2px solid #e17457;
+}
+
+.people-label {
+  display: flex;
+  justify-content: space-between;
+}
+.error-msg {
+  display: none;
+}
+.error-popped {
+  display: block;
+  color: #e17457;
+  font-weight: 600;
+  font-size: 18px;
+}
+.valid {
+  border: 2px solid #26c2ae;
+}
+.selected {
+  background-color: #26c2ae;
+  color: #00474b;
+  font-weight: 600;
+}
+.reset:hover {
+  background-color: #9fe8df;
+  cursor: pointer;
+}
+
+.valid-tip {
+  border: 2px solid #26c2ae;
+  width: 38vw;
+  height: 45px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 100px;
+  }
+  .tip-calculator {
+    display: flex;
+    border-radius: 25px;
+    justify-content: space-between;
+    width: 70vw;
+    margin: auto;
+  }
+  .logo {
+    margin-bottom: 90px;
+  }
+  .input {
+    width: 22vw;
+  }
+  .tip {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px 13px;
+    grid-template-areas:
+      "tip-5 tip-10 tip-15"
+      "tip-25 tip-50 tip-custom";
+  }
+  .tip-5 {
+    grid-area: tip-5;
+  }
+  .tip-10 {
+    grid-area: tip-10;
+  }
+  .tip-25 {
+    grid-area: tip-25;
+  }
+  .tip-50 {
+    grid-area: tip-50;
+  }
+  .tip-15 {
+    grid-area: tip-15;
+  }
+  .tip-custom {
+    grid-area: tip-custom;
+    width: 7.8vw;
+    font-size: 20px;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .tip button {
+    width: 8.1vw;
+  }
+  .calculated {
+    width: 27vw;
+    margin-left: 45px;
+    padding: 56px 50px;
+  }
+  .reset {
+    width: 26.5vw;
+    margin: auto;
+    margin-top: 100px;
+  }
+}
