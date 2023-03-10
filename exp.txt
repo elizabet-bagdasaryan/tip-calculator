@@ -1,5 +1,0 @@
-We start by selecting all the necessary elements from the HTML using document.getElementById and document.querySelector.
-We initialize some variables to keep track of the bill amount, tip percentage, and number of people.
-We add event listeners to the bill input, tip buttons, custom tip input, and number of people input to update the variables and recalculate the tip and total amounts whenever the user changes any of these values.
-We also add an event listener to the reset button to reset all the variables and clear the input fields and output values.
-The calculateTip function calculates the tip and total amounts based on the current values of the variables and updates the output values with the result. We also handle cases where the number of people is zero or NaN to avoid errors.
