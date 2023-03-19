@@ -11,6 +11,9 @@ let billAmount = 0;
 let tipPercent = 0;
 let numPeople = 1;
 
+
+
+
 billInput.addEventListener("input", function () {
   billAmount = parseFloat(billInput.value);
   calculateTip();
@@ -70,6 +73,11 @@ resetButton.addEventListener("click", function () {
   numPeopleInput.value = "";
   tipAmountOutput.textContent = "$0.00";
   totalAmountOutput.textContent = "$0.00";
+  tipButtons.forEach((button) => { button.classList.remove("selected")});
+  billInput.classList.remove("valid");
+  customTipInput.classList.remove("valid-tip");
+  numPeopleInput.classList.remove("valid");
+
 });
 
 function calculateTip() {
@@ -89,3 +97,7 @@ function calculateTip() {
   tipAmountOutput.textContent = `$${tipAmountPerPerson.toFixed(2)}`;
   totalAmountOutput.textContent = `$${totalAmountPerPerson.toFixed(2)}`;
 }
+
+billInput.oninput = (e) => e.target.value = e.target.value.replace("-", "");
+customTipInput.oninput = (e) => e.target.value = e.target.value.replace("-", "");
+numPeopleInput.oninput = (e) => e.target.value = e.target.value.replace("-", "");
