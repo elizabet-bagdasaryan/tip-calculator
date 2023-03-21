@@ -36,6 +36,7 @@ tipButtons.forEach((button) => {
     tipButtons.forEach((otherButton) => {
       otherButton.classList.remove("selected");
     });
+    customTipInput.classList.remove("valid-tip");
     button.classList.toggle("selected");
   });
 });
@@ -51,6 +52,10 @@ customTipInput.addEventListener("input", function () {
 
 customTipInput.addEventListener("click", function () {
   customTipInput.classList.add("valid-tip");
+  tipButtons.forEach((otherButton) => {
+    otherButton.classList.remove("selected");
+  });
+
 });
 numPeopleInput.addEventListener("input", function () {
   numPeople = parseInt(numPeopleInput.value);
@@ -80,6 +85,9 @@ resetButton.addEventListener("click", function () {
   billInput.classList.remove("valid");
   customTipInput.classList.remove("valid-tip");
   numPeopleInput.classList.remove("valid");
+  errorMessage.classList.remove("error-popped");
+  numPeopleInput.classList.remove("error");
+
 
 });
 
