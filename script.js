@@ -42,8 +42,11 @@ tipButtons.forEach((button) => {
 
 customTipInput.addEventListener("input", function () {
   tipPercent = parseFloat(customTipInput.value);
-
+  if ( parseFloat(customTipInput.value) >100){
+    customTipInput.value=100
+  }
   calculateTip();
+ 
 });
 
 customTipInput.addEventListener("click", function () {
